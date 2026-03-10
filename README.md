@@ -1,6 +1,6 @@
-# Populate Missing Stable Page Metadata
+# Populate Stable Page Metadata
 
-This KOReader plugin backfills missing stable page metadata in book sidecar files.
+This KOReader plugin populates stable page metadata in book sidecar files, filling missing values and optionally updating per-book settings.
 
 ## Compatibility
 
@@ -9,18 +9,18 @@ This KOReader plugin backfills missing stable page metadata in book sidecar file
 ## What it does
 
 - Scans the selected folder and all subfolders for books with sidecar metadata.
-- For supported crengine documents, populates missing required stable page fields.
+- For supported crengine documents, populates required stable page fields when absent.
 - Required fields for this plugin are:
   - `pagemap_doc_pages`
   - `pagemap_use_page_labels`
-- Also writes optional stable page fields when missing and available:
+- Also writes optional stable page fields when available:
   - `pagemap_current_page_label`
   - `pagemap_last_page_label`
   - `pagemap_show_page_labels`
   - `pagemap_chars_per_synthetic_page`
 - Keeps existing per-book values as-is by default (does not overwrite them).
 - Optional checkbox in the confirmation dialog can overwrite per-book stable page settings that differ from current global values and recompute page metadata.
-- Uses current global KOReader settings for per-book display flags only when those per-book flags are missing.
+- Uses current global KOReader settings for per-book display flags only when those per-book flags are absent.
 - When overwrite mode is enabled, per-book display flags and synthetic page size are aligned to the current global values.
 
 ## Install
@@ -36,7 +36,7 @@ The final path should look like:
 
 Open KOReader File Manager, then go to:
 
-`Tools -> More tools -> Populate missing stable page metadata`
+`Tools -> More tools -> Populate stable page metadata`
 
 ## Notes
 

@@ -33,7 +33,7 @@ end
 
 function PageMapMigrate:addToMainMenu(menu_items)
     menu_items.pagemap_metadata_population = {
-        text = _("Populate missing stable page metadata"),
+        text = _("Populate stable page metadata"),
         sorting_hint = "more_tools",
         callback = function()
             self:confirmMigration()
